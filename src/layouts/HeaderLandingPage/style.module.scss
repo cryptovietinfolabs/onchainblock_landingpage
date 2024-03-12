@@ -1,0 +1,14 @@
+.header {
+  z-index: 999;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: inherit;
+  border-bottom: 1px solid #ffffff20;
+  background: var(--brand-black-o60);
+  backdrop-filter: blur(4px);
+}
