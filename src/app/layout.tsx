@@ -5,7 +5,7 @@ import Head from "next/head";
 import { headers } from "next/headers";
 import { cookieToInitialState } from "wagmi";
 
-import { nunito } from "@/constants/fonts";
+import { opensans } from "@/constants/fonts";
 import FooterLandingPage from "@/layouts/FooterLandingPage";
 import HeaderLandingPage from "@/layouts/HeaderLandingPage";
 import { config } from "@/wagmi/config";
@@ -43,7 +43,7 @@ export default function RootLayout({
           href="/favicon-32x32.png"
         ></link>
       </Head>
-      <body className={` ${nunito.className}`}>
+      <body className={` ${opensans.className}`}>
         <Providers initialState={initialState}>
           <HeaderLandingPage />
           <Template>{children}</Template>

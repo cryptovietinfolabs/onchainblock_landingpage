@@ -1,13 +1,9 @@
-export const formatDate = (seconds: number): string => {
-  const date = new Date(seconds * 1000);
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  };
+export const formatDate = (newDate: Date) => {
+  const date = newDate.getDate();
+  const month = newDate.getMonth() + 1;
+  const year = newDate.getFullYear();
 
-  return date.toLocaleString("en-US", options);
+  return `${year}-${month < 10 ? `0${month}` : `${month}`}-${
+    date < 10 ? `0${date}` : `${date}`
+  }`;
 };

@@ -3,6 +3,8 @@
 import { Box, Button, Container, HStack } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
+import SvgInsert from "@/components/SvgInsert";
+
 import s from "./style.module.scss";
 
 export default function HeaderLandingPage(): React.ReactElement {
@@ -13,7 +15,7 @@ export default function HeaderLandingPage(): React.ReactElement {
       <Container maxW="6xl" className="fixed">
         <Box>
           <HStack justifyContent="space-between">
-            <Button variant="ghost">OnchainBlock</Button>
+            <SvgInsert src="/logos/logo.svg" />
             <HStack>
               <Button variant="ghost">Home</Button>
               <Button
