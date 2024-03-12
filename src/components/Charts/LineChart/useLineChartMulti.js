@@ -66,8 +66,9 @@ const useLineChart2 = (data, type, labelApi, chain) => {
             const svgLabel = listSvg?.map((svg) => {
               const matchingSvg = svgMap[this.name];
               const svgContent = matchingSvg ? svg[matchingSvg] : "";
-              return `<div style="text-decoration:none; color:${this.visible ? this.color : "gray"
-                }; display:flex; gap:4px; align-items:center;">${svgContent}${name}</div>`;
+              return `<div style="text-decoration:none; color:${
+                this.visible ? this.color : "gray"
+              }; display:flex; gap:4px; align-items:center;">${svgContent}${name}</div>`;
             });
 
             return svgLabel.join("");
@@ -157,8 +158,9 @@ export const useLineChart3 = (data, type, labelApi, chain) => {
             const svgLabel = listSvg?.map((svg) => {
               const matchingSvg = svgMap[this.name];
               const svgContent = matchingSvg ? svg[matchingSvg] : "";
-              return `<div style="text-decoration:none; color:${this.visible ? this.color : "gray"
-                }; display:flex; gap:4px; align-items:center;">${svgContent}${name}</div>`;
+              return `<div style="text-decoration:none; color:${
+                this.visible ? this.color : "gray"
+              }; display:flex; gap:4px; align-items:center;">${svgContent}${name}</div>`;
             });
 
             return svgLabel.join("");

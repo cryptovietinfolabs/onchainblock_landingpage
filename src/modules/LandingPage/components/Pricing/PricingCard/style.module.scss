@@ -5,7 +5,7 @@
     position: relative;
     z-index: 1;
   }
-  
+
   &::before {
     content: "";
     display: block;
@@ -25,7 +25,9 @@
         transparent 0
       );
     background-size: 1.3rem 1.3rem;
-    background-position: 0 0, 0.65rem 0.65rem;
+    background-position:
+      0 0,
+      0.65rem 0.65rem;
     z-index: 0;
   }
 }

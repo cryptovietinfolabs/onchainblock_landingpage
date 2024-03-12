@@ -1,10 +1,12 @@
-import LabelSvg from "@/hooks/LabelSvg";
-import chartAreaDetail from "@/style/chartArea/tooltip";
-import ListColor from "@/utils/ListColor";
 import Highcharts from "highcharts";
 import HighchartsExporting from "highcharts/modules/exporting";
 import HighchartsStock from "highcharts/modules/stock";
 import { useEffect, useRef } from "react";
+
+import LabelSvg from "@/hooks/LabelSvg";
+import chartAreaDetail from "@/styles/chartArea/tooltip";
+import ListColor from "@/utils/ListColor";
+
 import ConvertSVG from "../../Logo/ConvertSVG";
 import SelectDay from "../../SelectDay/SelectDay";
 if (typeof Highcharts === "object") {
@@ -35,7 +37,7 @@ const useLineChart3 = (data, type, name, legend) => {
           month - 1,
           day.slice(0, 2),
           hour,
-          minute
+          minute,
         );
 
         return [utcDate, item.value];
@@ -48,10 +50,6 @@ const useLineChart3 = (data, type, name, legend) => {
 
         legend: {
           enabled: legend ? false : true,
-          useHTML: true,
-          itemHoverStyle: {
-            textDecoration: "none",
-          },
           useHTML: true,
           itemHoverStyle: {
             textDecoration: "none",
