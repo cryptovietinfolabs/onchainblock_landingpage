@@ -17,42 +17,42 @@ export const Badge: ComponentStyleConfig = {
 };
 
 export const Button: ComponentStyleConfig = {
-  variants: {
-    solid: {
-      borderRadius: "24px",
-      color: "brand.camo.400",
-      bg: "brand.camo.200",
-      transition: "all 0.3s ease-in-out",
-      fontWeight: "bolder",
-      _hover: {
-        bg: "brand.yellow.200",
-      },
-      _disabled: {
-        _hover: {
-          bg: "brand.camo.300",
-        },
-      },
-    },
-    ghost: {
-      color: "brand.camo.200",
-      _hover: {
-        color: "brand.yellow.100",
-        svg: {
-          transition: "all 0.3s ease-in-out",
-          fill: "brand.yellow.100",
-        },
-      },
-    },
-    outline: {
-      borderRadius: "24px",
-      borderWidth: "1px",
-      borderStyle: "solid",
-      borderColor: "brand.camo.200",
-      height: "100%",
-      px: "4px",
-      py: "4px",
-    },
-  },
+  // variants: {
+  //   solid: {
+  //     borderRadius: "24px",
+  //     color: "brand.camo.400",
+  //     bg: "brand.camo.200",
+  //     transition: "all 0.3s ease-in-out",
+  //     fontWeight: "bolder",
+  //     _hover: {
+  //       bg: "brand.yellow.200",
+  //     },
+  //     _disabled: {
+  //       _hover: {
+  //         bg: "brand.camo.300",
+  //       },
+  //     },
+  //   },
+  //   ghost: {
+  //     color: "brand.camo.200",
+  //     _hover: {
+  //       color: "brand.yellow.100",
+  //       svg: {
+  //         transition: "all 0.3s ease-in-out",
+  //         fill: "brand.yellow.100",
+  //       },
+  //     },
+  //   },
+  //   outline: {
+  //     borderRadius: "24px",
+  //     borderWidth: "1px",
+  //     borderStyle: "solid",
+  //     borderColor: "brand.camo.200",
+  //     height: "100%",
+  //     px: "4px",
+  //     py: "4px",
+  //   },
+  // },
 };
 
 export const Card: ComponentStyleConfig = {

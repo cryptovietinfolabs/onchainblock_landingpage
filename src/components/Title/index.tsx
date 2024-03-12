@@ -1,7 +1,5 @@
 import { As, ChakraProps, Text } from "@chakra-ui/react";
 
-import { evening } from "@/constants/fonts";
-
 import s from "./style.module.scss";
 
 interface ITitle extends ChakraProps {
@@ -23,7 +21,7 @@ export default function Title({
   return (
     <Text
       as={as}
-      className={`${s.title} ${classNameSize} ${className} ${evening.className}`}
+      className={`${s.title} ${classNameSize} ${className}`}
       color={color}
       lineHeight="100%"
     >

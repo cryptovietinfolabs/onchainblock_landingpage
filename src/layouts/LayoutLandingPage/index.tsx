@@ -1,7 +1,6 @@
-import { Container } from "@chakra-ui/react";
-import { ThemeProvider } from "../../contexts/ThemeProvider";
-import HeaderLandingPage from "../HeaderLandingPage";
+import { BrandThemeProvider } from "../../contexts/BrandThemeProvider";
 import FooterLandingPage from "../FooterLandingPage";
+import HeaderLandingPage from "../HeaderLandingPage";
 
 interface LayoutLandingPageProps {
   children: React.ReactElement;
@@ -9,12 +8,12 @@ interface LayoutLandingPageProps {
 
 export default function LayoutLandingPage({
   children,
-}: LayoutLandingPageProps) {
+}: LayoutLandingPageProps): React.ReactElement {
   return (
-    <ThemeProvider cookies={"blastTheme"}>
+    <BrandThemeProvider cookies={"blastTheme"}>
       <HeaderLandingPage />
       {children}
       <FooterLandingPage />
-    </ThemeProvider>
+    </BrandThemeProvider>
   );
 }
