@@ -6,8 +6,7 @@ import { headers } from "next/headers";
 import { cookieToInitialState } from "wagmi";
 
 import { opensans } from "@/constants/fonts";
-import FooterLandingPage from "@/layouts/FooterLandingPage";
-import HeaderLandingPage from "@/layouts/HeaderLandingPage";
+import Layout from "@/layouts";
 import { config } from "@/wagmi/config";
 
 import Providers from "./providers";
@@ -45,9 +44,9 @@ export default function RootLayout({
       </Head>
       <body className={` ${opensans.className}`}>
         <Providers initialState={initialState}>
-          <HeaderLandingPage />
-          <Template>{children}</Template>
-          <FooterLandingPage />
+          <Layout>
+            <Template>{children}</Template>
+          </Layout>
         </Providers>
       </body>
     </html>

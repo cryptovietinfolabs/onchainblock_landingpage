@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 import { Ethereum, Sort } from "@/components/Logo";
-import useDataApi from "@/data/DataApi";
+import useFetch from "@/hooks/data/useFetch";
 
 import EthBridgeItemTable from "../EthBridgeItemTable";
 
 function EthBridgeTable({ isDarkMode = false }) {
-  const { isLoading, data } = useDataApi("valuelocked/table", "table-bridge");
+  const { isLoading, data } = useFetch("valuelocked/table", "table-bridge");
 
   const [selectSort, setSelectSort] = useState(true);
   const [selectLabel, setSelectLabel] = useState(0);

@@ -40,7 +40,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/LineCex/index.jsx",
+    "src/modules/LandingPage/components/About/LineCex/index.jsx",
     "src/components/EthBridgeTable/index.jsx"
   ],
   "exclude": ["node_modules"]

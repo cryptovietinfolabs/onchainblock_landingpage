@@ -10,7 +10,7 @@ export default function About(): React.ReactElement {
       <Stack as="section">
         <VStack mb={8}>
           <Text fontSize="4xl" lineHeight="100%" as="h3">
-            Curious About Cryptocurrency Trends?
+            Ready to Uncover Hidden Crypto Gems?
           </Text>
           <Text fontSize="4xl" lineHeight="100%" as="h3">
             Explore Onchain Data Today

@@ -7,7 +7,7 @@ import SvgInsert from "@/components/SvgInsert";
 
 import s from "./style.module.scss";
 
-export default function HeaderLandingPage(): React.ReactElement {
+export default function Header(): React.ReactElement {
   const router = useRouter();
 
   return (

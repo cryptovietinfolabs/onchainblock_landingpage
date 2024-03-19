@@ -1,3 +1,18 @@
 .hero {
   padding-top: 80px;
 }
+
+.slide {
+  &_img {
+    padding: 12px;
+    overflow: hidden;
+    border: 1px solid #ffffff49;
+    background: #ffffff26;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+
+    img {
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function ShowLabel(labelApi, label2) {
-  const [label, setLabel] = useState(labelApi);
-  const [listLabel, setListLabel] = useState(labelApi);
-  const [labelSelect, setLabelSelect] = useState(label2);
-  const [showAllLabels, setShowAllLabels] = useState(label2);
+interface IUseShowLabel {
+  handleAddLabel: (value: string) => void;
+  handleRemoveLabel: (value: string) => void;
+  handleToggleLabels: (value: string) => void;
+  label: string[];
+  labelSelect: string[];
+}
 
-  const handleAddLabel = (item) => {
+export default function useShowLabel(
+  initialLabels: string[],
+  labelList: string[],
+): IUseShowLabel {
+  const [label, setLabel] = useState(initialLabels);
+  const [listLabel, setListLabel] = useState(initialLabels);
+  const [labelSelect, setLabelSelect] = useState(labelList);
+  const [showAllLabels, setShowAllLabels] = useState(true);
+
+  const handleAddLabel = (item: string): void => {
     if (!listLabel.includes(item)) {
       const updatedLabels = [...label, item];
 
@@ -20,7 +31,7 @@ export default function ShowLabel(labelApi, label2) {
     }
   };
 
-  const handleRemoveLabel = (item) => {
+  const handleRemoveLabel = (item: string): void => {
     const filteredLabels = listLabel.filter((labelItem) => labelItem !== item);
     setListLabel(filteredLabels);
     setLabel(filteredLabels);
@@ -30,11 +41,11 @@ export default function ShowLabel(labelApi, label2) {
     }
   };
 
-  const handleToggleLabels = () => {
+  const handleToggleLabels = (): void => {
     if (showAllLabels) {
       setLabel([]);
       setListLabel([]);
-      setLabelSelect(label2);
+      setLabelSelect(labelList);
     } else {
       setListLabel(labelSelect);
       setLabel(labelSelect);
@@ -42,8 +53,6 @@ export default function ShowLabel(labelApi, label2) {
     }
     setShowAllLabels(!showAllLabels);
   };
-
-  useEffect(() => {}, [labelApi, label, labelSelect]);
 
   return {
     handleAddLabel,

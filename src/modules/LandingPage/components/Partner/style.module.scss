@@ -1,0 +1,92 @@
+@mixin blend-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(27, 27, 27, 1) 0%,
+    rgba(27, 27, 27, 1) 20%,
+    rgba(27, 27, 27, 0) 100%
+  );
+}
+
+$animationSpeed: 5s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 5));
+  }
+}
+
+@keyframes scroll-tablet {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 5));
+  }
+}
+
+.slider {
+  // background: rgb(27, 27, 27);
+  z-index: 1;
+  height: 98px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 310px;
+
+  @include min-tablet {
+    height: 136px;
+    width: 960px;
+  }
+
+  &::before,
+  &::after {
+    @include blend-gradient;
+    content: "";
+    height: 140px;
+    position: absolute;
+    width: 48px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg) translate(-6px, 2px);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+    transform: translate(-6px, -2px);
+  }
+
+  .slide_track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    gap: 24px;
+    width: calc(122px * 6);
+    position: absolute;
+
+    @include min-tablet {
+      animation: scroll-tablet $animationSpeed linear infinite;
+      width: calc(400px * 10);
+    }
+  }
+
+  .slide {
+    position: relative;
+    width: 98px;
+
+    @include min-tablet {
+      height: 100px;
+      width: 400px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

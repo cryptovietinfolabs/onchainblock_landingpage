@@ -8,7 +8,8 @@ import {
 } from "@chakra-ui/react";
 
 import EthBridgeTable from "@/components/EthBridgeTable";
-import LineCex from "@/components/LineCex";
+
+import LineCex from "./LineCex";
 
 export default function Introduction(): React.ReactElement {
   return (

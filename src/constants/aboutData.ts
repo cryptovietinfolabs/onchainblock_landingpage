@@ -2,26 +2,17 @@ export const aboutTopData = [
   {
     image: "",
     title: "Provide API",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni in
-        ipsa doloremque molestiae ducimus velit! Beatae illum, quis sint ratione
-        earum reprehenderit nesciunt repudiandae necessitatibus dolorum
-        doloribus ipsum molestias!`,
+    desc: `Discover new projects based on multiple different financial & alternative metrics and market sectors`,
   },
   {
     image: "",
     title: "Visualize",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni in
-        ipsa doloremque molestiae ducimus velit! Beatae illum, quis sint ratione
-        earum reprehenderit nesciunt repudiandae necessitatibus dolorum
-        doloribus ipsum molestias!`,
+    desc: `We perform accurate statistics tracking cash flow history across layer2, bridges and Cexs - Professional data analytics platform`,
   },
   {
     image: "",
     title: "Compare",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni in
-        ipsa doloremque molestiae ducimus velit! Beatae illum, quis sint ratione
-        earum reprehenderit nesciunt repudiandae necessitatibus dolorum
-        doloribus ipsum molestias!`,
+    desc: `Benchmark and analyze the performance of projects based on different financial & alternative metrics`,
   },
 ];
 
@@ -29,17 +20,11 @@ export const aboutBottomData = [
   {
     image: "",
     title: "Report",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni in
-        ipsa doloremque molestiae ducimus velit! Beatae illum, quis sint ratione
-        earum reprehenderit nesciunt repudiandae necessitatibus dolorum
-        doloribus ipsum molestias!`,
+    desc: `Statistics on valuable data and major fluctuations in onchain in the market`,
   },
   {
     image: "",
     title: "Alert",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni in
-        ipsa doloremque molestiae ducimus velit! Beatae illum, quis sint ratione
-        earum reprehenderit nesciunt repudiandae necessitatibus dolorum
-        doloribus ipsum molestias!`,
+    desc: `Monitor Telegram bots that notify fluctuations in cash flows of exchanges and layer2`,
   },
 ];

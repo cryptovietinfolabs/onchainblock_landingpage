@@ -24,19 +24,23 @@ export default function Hero(): React.ReactElement {
       <VStack spacing={8} className={s.hero} as="section">
         <SimpleGrid columns={2} spacing={8}>
           <Stack>
-            <Text fontSize="6xl" lineHeight="100%" fontWeight="bold">
-              ALL-IN-ONE
-            </Text>
-            <Text fontSize="6xl" lineHeight="100%" fontWeight="bold">
-              ONCHAIN
+            <Text
+              fontSize={80}
+              lineHeight="100%"
+              fontWeight={600}
+              color="brand.neutral.black.1"
+            >
+              ALL-IN-ONE ONCHAIN
             </Text>
           </Stack>
           <Stack justifyContent="space-between">
-            <Text fontSize="4xl">DATA ANALYSTIC FLATFORM</Text>
-            <Text>
-              Welcome to OnchainBlock - the destination to delve deeper into the
-              realm of Stablecoins, Ethereum, and various other asset types
-              based on blockchain technology
+            <Text fontSize={36} fontWeight={600} color="brand.neutral.black.1">
+              DATA ANALYSTIC FLATFORM
+            </Text>
+            <Text fontSize={16} color="brand.neutral.black.1">
+              The place where you can delve deeper into the On-chain Data World
+              of Stablecoins, Ethereum, and various other asset types in the
+              Blockchain Universe.
             </Text>
           </Stack>
         </SimpleGrid>
@@ -64,28 +68,28 @@ export default function Hero(): React.ReactElement {
             }}
             loop={true}
           >
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-1" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-2" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-3" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-4" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-5" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-6" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-7" />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
               <img src="https://source.unsplash.com/random?computer chart-8" />
             </SwiperSlide>
           </Swiper>

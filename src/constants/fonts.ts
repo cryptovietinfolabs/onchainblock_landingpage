@@ -1,7 +1,7 @@
-import { Open_Sans } from "next/font/google";
+import { Prompt } from "next/font/google";
 
-export const opensans = Open_Sans({
-  weight: ["600"],
+export const opensans = Prompt({
+  weight: ["400", "600"],
   subsets: ["latin"],
   display: "swap",
 });

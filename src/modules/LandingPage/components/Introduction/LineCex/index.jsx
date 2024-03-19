@@ -10,7 +10,7 @@ import useLineChart2 from "@/components/Charts/LineChart/useLineChartMulti";
 import LoadingChart from "@/components/Loading/LoadingChart";
 import CentralizeApi from "@/data/CentralizeApi";
 import CaptureDiv from "@/hooks/CaptureDiv";
-import ShowLabel from "@/hooks/ShowLabel";
+import useShowLabel from "@/hooks/chart/useShowLabel";
 
 function LineCex() {
   const [isChecked, setIsChecked] = useState(false);
@@ -43,7 +43,7 @@ function LineCex() {
     handleAddLabel,
     handleRemoveLabel,
     handleToggleLabels,
-  } = ShowLabel(labelApi, label2);
+  } = useShowLabel(labelApi, label2);
 
   const { data, isLoading, isError } = CentralizeApi(label);
 
@@ -82,10 +82,10 @@ function LineCex() {
 
       {isLoading ? (
         <div className="h-[14rem]">
-          <div class="loading  text-center mt-32">
-            <span class="loading__dot"></span>
-            <span class="loading__dot"></span>
-            <span class="loading__dot"></span>
+          <div className="loading text-center mt-32">
+            <span className="loading__dot"></span>
+            <span className="loading__dot"></span>
+            <span className="loading__dot"></span>
           </div>
         </div>
       ) : data?.length === 0 ? (

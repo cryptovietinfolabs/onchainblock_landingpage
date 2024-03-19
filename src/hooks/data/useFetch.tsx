@@ -1,7 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const useDataApi = (url, name) => {
+interface IUseFetchResult {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+  isLoading: boolean;
+  isError: boolean;
+}
+
+const useFetch = (url: string, name: string): IUseFetchResult => {
   const { data, isLoading, isError } = useQuery({
     queryKey: [name],
     queryFn: async () => {
@@ -19,4 +26,4 @@ const useDataApi = (url, name) => {
   return { data, isLoading, isError };
 };
 
-export default useDataApi;
+export default useFetch;
