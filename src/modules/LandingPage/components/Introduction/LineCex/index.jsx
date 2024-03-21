@@ -61,7 +61,9 @@ function LineCex() {
     <div className="p-4 h-full flex flex-col justify-between shadow-md">
       <div className="lg:flex md:flex justify-between items-center ">
         <div className="p-4">
-          <h3 className="font-semibold">Stablecoin Reserve On Chain</h3>
+          <h3 className="text-[14px] md:text-[16px] font-semibold">
+            Stablecoin Reserve On Chain
+          </h3>
         </div>
 
         {/* <button id="toggleButton">Toggle Series</button> */}

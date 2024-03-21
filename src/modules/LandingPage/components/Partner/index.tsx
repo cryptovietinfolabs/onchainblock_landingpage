@@ -1,9 +1,14 @@
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+"use client";
+
+import { Box, HStack, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
+
+import useWindowSize from "@/hooks/common/useWindowSize";
 
 import s from "./style.module.scss";
 
 export default function Partner(): React.ReactElement {
+  const { isMobile } = useWindowSize();
   return (
     <VStack as="section" mb="80px">
       <Text fontSize="4xl" lineHeight="100%" as="h3">
@@ -45,7 +50,6 @@ export default function Partner(): React.ReactElement {
           </Box>
         </Box>
       </HStack>
-
       {/* <HStack>
         <Box
           position="relative"

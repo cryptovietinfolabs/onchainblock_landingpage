@@ -65,25 +65,25 @@
 }
 
 @mixin min-tablet {
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: 767px) {
     @content;
   }
 }
 
 @mixin min-tabletWide {
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: 991px) {
     @content;
   }
 }
 
 @mixin pcSmall {
-  @media (min-width: theme("screens.xl")) {
+  @media (min-width: 1279px) {
     @content;
   }
 }
 
 @mixin pcMid {
-  @media (min-width: theme("screens.xl")) {
+  @media (min-width: 1279px) {
     @content;
   }
 }

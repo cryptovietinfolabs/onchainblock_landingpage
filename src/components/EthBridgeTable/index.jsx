@@ -33,7 +33,7 @@ function EthBridgeTable({ isDarkMode = false }) {
     >
       <div className="px-4 pb-4 shadow-md">
         <div className=" p-4 border rounded-lg overflow-x-scroll">
-          <h3 className="font-semibold pb-4">
+          <h3 className="text-[14px] md:text-[16px] font-semibold pb-4">
             {`Ethereum's Value Locked Statistics on Layer 2s`}
           </h3>
           <table className="w-full text-left">

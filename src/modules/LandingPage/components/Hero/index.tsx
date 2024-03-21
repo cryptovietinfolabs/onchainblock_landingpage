@@ -22,10 +22,10 @@ export default function Hero(): React.ReactElement {
   return (
     <Container as="main" maxW="6xl">
       <VStack spacing={8} className={s.hero} as="section">
-        <SimpleGrid columns={2} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <Stack>
             <Text
-              fontSize={80}
+              fontSize={{ base: 48, md: 80 }}
               lineHeight="100%"
               fontWeight={600}
               color="brand.neutral.black.1"
@@ -34,7 +34,12 @@ export default function Hero(): React.ReactElement {
             </Text>
           </Stack>
           <Stack justifyContent="space-between">
-            <Text fontSize={36} fontWeight={600} color="brand.neutral.black.1">
+            <Text
+              fontSize={{ base: 24, md: 36 }}
+              fontWeight={600}
+              color="brand.neutral.black.1"
+              letterSpacing={{ base: "-1px", md: 0 }}
+            >
               DATA ANALYSTIC FLATFORM
             </Text>
             <Text fontSize={16} color="brand.neutral.black.1">

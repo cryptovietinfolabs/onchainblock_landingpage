@@ -79,7 +79,12 @@
   background-color: var(--white);
   z-index: 3;
   // left: 350px;
-  top: -600px;
+  top: -50%;
+  left: -50%;
+
+  @include min-tablet {
+    top: -600px;
+  }
 }
 
 .two {
@@ -87,8 +92,14 @@
   width: 1920px;
   height: 1080px;
   // left: 300px;
-  top: -400px;
   background-color: var(--blue-3);
+  top: -40%;
+  left: -40%;
+
+
+  @include min-tablet {
+    top: -400px;
+  }
 }
 
 .three {
@@ -97,6 +108,11 @@
   height: 1800px;
   background-color: var(--blue-2);
   // left: 300px;
-  top: -900px;
   animation: flyPlus 10s linear infinite;
+  top: -100%;
+  display: none;
+
+  @include min-tablet {
+    top: -900px;
+  }
 }

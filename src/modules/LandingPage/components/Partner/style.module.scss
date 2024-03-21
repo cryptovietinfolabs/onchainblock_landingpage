@@ -14,7 +14,7 @@ $animationSpeed: 15s;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-400px * 5));
+    transform: translateX(calc(-250px * 5));
   }
 }
 
@@ -66,7 +66,7 @@ $animationSpeed: 15s;
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     gap: 24px;
-    width: calc(122px * 6);
+    width: calc(250px * 10);
     position: absolute;
 
     @include min-tablet {
@@ -74,18 +74,19 @@ $animationSpeed: 15s;
       width: calc(400px * 10);
     }
   }
+}
 
-  .slide {
-    position: relative;
-    width: 98px;
+.slide {
+  position: relative;
+  height: 50px;
+  width: 250px;
 
-    @include min-tablet {
-      height: 100px;
-      width: 400px;
+  @include min-tablet {
+    height: 100px;
+    width: 400px;
+  }
 
-      img {
-        object-fit: contain;
-      }
-    }
+  img {
+    object-fit: contain !important;
   }
 }
