@@ -46,7 +46,7 @@ export default function Partner(): React.ReactElement {
         </Box>
       </HStack>
 
-      <HStack>
+      {/* <HStack>
         <Box
           position="relative"
           aspectRatio={16 / 9}
@@ -103,7 +103,7 @@ export default function Partner(): React.ReactElement {
         >
           <Image src={""} alt={""} />
         </Box>
-      </HStack>
+      </HStack> */}
     </VStack>
   );
 }

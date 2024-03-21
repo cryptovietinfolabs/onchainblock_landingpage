@@ -1,13 +1,13 @@
 @mixin blend-gradient {
   background: linear-gradient(
     to right,
-    rgba(27, 27, 27, 1) 0%,
-    rgba(27, 27, 27, 1) 20%,
-    rgba(27, 27, 27, 0) 100%
+    rgba(18, 18, 18, 1) 0%,
+    rgba(18, 18, 18, 1) 20%,
+    rgba(18, 18, 18, 0) 100%
   );
 }
 
-$animationSpeed: 5s;
+$animationSpeed: 15s;
 
 @keyframes scroll {
   0% {
@@ -28,7 +28,6 @@ $animationSpeed: 5s;
 }
 
 .slider {
-  // background: rgb(27, 27, 27);
   z-index: 1;
   height: 98px;
   margin-bottom: 80px;
@@ -38,7 +37,7 @@ $animationSpeed: 5s;
 
   @include min-tablet {
     height: 136px;
-    width: 960px;
+    width: 100%;
   }
 
   &::before,
