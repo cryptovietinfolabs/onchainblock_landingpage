@@ -25,7 +25,7 @@ export default function Hero(): React.ReactElement {
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <Stack>
             <Text
-              fontSize={{ base: 48, md: 80 }}
+              fontSize={{ base: 48, md: 56, xl: 80 }}
               lineHeight="100%"
               fontWeight={600}
               color="brand.neutral.black.1"

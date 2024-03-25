@@ -320,8 +320,8 @@ function ConvertSVG() {
     `,
       "zkSync Era": `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="currentColor"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.64 7.95995L9.97197 5.30396V7.24795L7.32397 9.19595H9.97197V10.616L12.64 7.95995Z" fill="white"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.23999 7.96005L5.90799 10.616V8.68405L8.55599 6.72005H5.90799V5.30005L3.23999 7.96005Z" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.64 7.95995L9.97197 5.30396V7.24795L7.32397 9.19595H9.97197V10.616L12.64 7.95995Z" fill="black"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.23999 7.96005L5.90799 10.616V8.68405L8.55599 6.72005H5.90799V5.30005L3.23999 7.96005Z" fill="black"/>
       </svg>
     `,
       "Zksync Era": `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
