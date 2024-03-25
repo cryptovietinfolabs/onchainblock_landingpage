@@ -16,7 +16,7 @@ import AboutItem from "./AboutItem";
 import s from "./style.module.scss";
 
 export default function About(): React.ReactElement {
-  const { isTablet } = useWindowSize();
+  const { isTablet, isDesktop } = useWindowSize();
 
   return (
     <Container maxW="6xl">
@@ -45,8 +45,8 @@ export default function About(): React.ReactElement {
           </Text>
         </VStack>
         <Stack gap={8}>
-          {isTablet ? (
-            <Stack gap={6}>
+          {!isDesktop ? (
+            <SimpleGrid columns={{ base: 1, sm: 2 }} gap={8}>
               {aboutData.map((item) => {
                 if (!item.title) return;
                 else {
@@ -61,7 +61,7 @@ export default function About(): React.ReactElement {
                   );
                 }
               })}
-            </Stack>
+            </SimpleGrid>
           ) : (
             <SimpleGrid columns={{ base: 1, md: 3 }} gap={8}>
               {aboutData.map((item) => {

@@ -15,9 +15,10 @@ const EthBridgeItemTable = ({ data, isLoading, selectSort, selectLabel }) => {
   const sortedData = data;
 
   const sortCriteria = {
-    0: "pr_1d",
-    1: "pr_7d",
-    2: "pr_30d",
+    0: "balance",
+    1: "pr_1d",
+    2: "pr_7d",
+    3: "pr_30d",
   };
 
   sortedData?.sort((a, b) => {

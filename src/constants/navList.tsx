@@ -1,14 +1,19 @@
 export interface INavItem {
   name: string;
-  link?: string;
+  link: string;
 }
 
 export const navList: INavItem[] = [
   {
-    name: "What is Ble Ble?",
-    link: "https://bleble.vip/",
+    name: "Introduction",
+    link: "introduction",
   },
-  // {
-  //   name: "Airdrop",
-  // },
+  {
+    name: "About",
+    link: "about",
+  },
+  {
+    name: "Partners",
+    link: "partners",
+  },
 ];

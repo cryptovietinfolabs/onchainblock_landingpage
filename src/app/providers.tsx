@@ -4,6 +4,7 @@ import { State } from "wagmi";
 
 import { BrandThemeProvider } from "@/contexts/BrandThemeProvider";
 import QueryClientProviders from "@/contexts/QueryClientProvider";
+import { ScrollProvider } from "@/contexts/ScrollProvider";
 import { UiProvider } from "@/contexts/UiProvider";
 import WagmiProviders from "@/contexts/WagmiProvider";
 
@@ -21,7 +22,7 @@ export default function Providers({
       <WagmiProviders initialState={initialState}>
         <QueryClientProviders>
           <BrandThemeProvider cookies={"blastTheme"}>
-            {children}
+            <ScrollProvider>{children}</ScrollProvider>
           </BrandThemeProvider>
         </QueryClientProviders>
       </WagmiProviders>

@@ -15,6 +15,9 @@ function EthBridgeTable({ isDarkMode = false }) {
 
   const listLabel = [
     {
+      name: "Balance",
+    },
+    {
       name: "24h Change",
     },
     {
@@ -44,9 +47,6 @@ function EthBridgeTable({ isDarkMode = false }) {
                 </th>
                 <th className="flex justify-start lg:w-full md:w-full w-[200px]">
                   Bridge
-                </th>
-                <th className="flex justify-end lg:w-full md:w-full w-[140px]">
-                  Balance <Ethereum />
                 </th>
 
                 {listLabel.map((item, idx) => (

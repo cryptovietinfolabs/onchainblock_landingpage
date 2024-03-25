@@ -32,6 +32,9 @@ export default function Partner(): React.ReactElement {
           <Box className={s.slide}>
             <Image src="/images/zk.svg" alt="moon" fill />
           </Box>
+          <Box className={s.slide}>
+            <Image src="/images/manta.svg" alt="moon" fill />
+          </Box>
 
           <Box className={s.slide}>
             <Image src="/images/ait-protocol.svg" alt="moon" fill />
@@ -47,6 +50,9 @@ export default function Partner(): React.ReactElement {
           </Box>
           <Box className={s.slide}>
             <Image src="/images/zk.svg" alt="moon" fill />
+          </Box>
+          <Box className={s.slide}>
+            <Image src="/images/manta.svg" alt="moon" fill />
           </Box>
         </Box>
       </HStack>

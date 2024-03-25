@@ -29,6 +29,8 @@ export default function Hero(): React.ReactElement {
               lineHeight="100%"
               fontWeight={600}
               color="brand.neutral.black.1"
+              bgGradient="linear(to-l, var(--gradient-1-from), var(--gradient-1-to))"
+              bgClip="text"
             >
               ALL-IN-ONE ONCHAIN
             </Text>

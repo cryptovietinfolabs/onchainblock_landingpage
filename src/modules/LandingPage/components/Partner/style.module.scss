@@ -14,7 +14,7 @@ $animationSpeed: 15s;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 5));
+    transform: translateX(calc(-250px * 6));
   }
 }
 
@@ -23,7 +23,7 @@ $animationSpeed: 15s;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-400px * 5));
+    transform: translateX(calc((-400px - 100px) * 6));
   }
 }
 
@@ -66,12 +66,13 @@ $animationSpeed: 15s;
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     gap: 24px;
-    width: calc(250px * 10);
+    width: calc(250px * 12);
     position: absolute;
 
     @include min-tablet {
       animation: scroll-tablet $animationSpeed linear infinite;
-      width: calc(400px * 10);
+      width: calc((400px + 100px) * 12);
+      gap: 100px;
     }
   }
 }
