@@ -17,42 +17,41 @@ export const Badge: ComponentStyleConfig = {
 };
 
 export const Button: ComponentStyleConfig = {
-  // variants: {
-  //   solid: {
-  //     borderRadius: "24px",
-  //     color: "brand.camo.400",
-  //     bg: "brand.camo.200",
-  //     transition: "all 0.3s ease-in-out",
-  //     fontWeight: "bolder",
-  //     _hover: {
-  //       bg: "brand.yellow.200",
-  //     },
-  //     _disabled: {
-  //       _hover: {
-  //         bg: "brand.camo.300",
-  //       },
-  //     },
-  //   },
-  //   ghost: {
-  //     color: "brand.camo.200",
-  //     _hover: {
-  //       color: "brand.yellow.100",
-  //       svg: {
-  //         transition: "all 0.3s ease-in-out",
-  //         fill: "brand.yellow.100",
-  //       },
-  //     },
-  //   },
-  //   outline: {
-  //     borderRadius: "24px",
-  //     borderWidth: "1px",
-  //     borderStyle: "solid",
-  //     borderColor: "brand.camo.200",
-  //     height: "100%",
-  //     px: "4px",
-  //     py: "4px",
-  //   },
-  // },
+  variants: {
+    solid: {
+      color: "brand.primary.white",
+      bg: "brand.primary.blue.2",
+      transition: "all 0.3s ease-in-out",
+      fontWeight: "bolder",
+      _hover: {
+        bg: "brand.primary.blue.3",
+      },
+      _disabled: {
+        _hover: {
+          bg: "brand.camo.300",
+        },
+      },
+    },
+    //   ghost: {
+    //     color: "brand.camo.200",
+    //     _hover: {
+    //       color: "brand.yellow.100",
+    //       svg: {
+    //         transition: "all 0.3s ease-in-out",
+    //         fill: "brand.yellow.100",
+    //       },
+    //     },
+    //   },
+    //   outline: {
+    //     borderRadius: "24px",
+    //     borderWidth: "1px",
+    //     borderStyle: "solid",
+    //     borderColor: "brand.camo.200",
+    //     height: "100%",
+    //     px: "4px",
+    //     py: "4px",
+    //   },
+  },
 };
 
 export const Card: ComponentStyleConfig = {
@@ -96,37 +95,19 @@ export const Input: ComponentStyleConfig = {
     },
   },
   variants: {
-    filled: {
+    fill: {
       field: {
-        color: "paragraph.accent.300",
-        fontSize: "1rem",
-        borderWidth: "1px",
-        borderStyle: "solid",
-        borderColor: "brand.camo.300",
-        borderRadius: "3xl",
-        background: "rgba(64, 72, 51, 0.5)",
-        // _invalid: {
-        //   borderColor: "secondary.original.100",
-        //   boxShadow: "secondary.original.100",
-        // },
-        _focusVisible: {
-          borderColor: "brand.camo.300",
-        },
-        _placeholder: {
-          color: "brand.camo.200",
-        },
-      },
-    },
-
-    search: {
-      field: {
-        color: "paragraph.accent.200",
-        pl: 14,
-        bg: "unset",
-        fontSize: "sm",
-
-        _placeholder: {
-          color: "currentColor",
+        width: "100%",
+        minWidth: 0,
+        outline: 0,
+        position: "relative",
+        appearance: "none",
+        transitionProperty: "common",
+        transitionDuration: "normal",
+        backgroundColor: "brand.neutral.grey.2",
+        _disabled: {
+          opacity: 0.4,
+          cursor: "not-allowed",
         },
       },
     },
@@ -156,6 +137,13 @@ const Popover: ComponentStyleConfig = {
     body: {
       p: 0,
     },
+  },
+};
+
+const Textarea: ComponentStyleConfig = {
+  baseStyle: {
+    color: "paragraph.accent.100",
+    backgroundColor: "brand.neutral.grey.2",
   },
 };
 
@@ -262,6 +250,7 @@ const themeDark = extendTheme({
     Select,
     Table,
     List,
+    Textarea,
   },
 });
 

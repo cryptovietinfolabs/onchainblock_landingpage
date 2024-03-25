@@ -1,0 +1,16 @@
+.contact {
+  margin-bottom: 80px;
+
+  &_form {
+    padding: 12px;
+    overflow: hidden;
+    border: 1px solid #ffffff49;
+    background: #ffffff26;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+
+    &_submit {
+      width: fit-content;
+    }
+  }
+}

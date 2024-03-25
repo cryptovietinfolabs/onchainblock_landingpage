@@ -16,4 +16,8 @@ export const navList: INavItem[] = [
     name: "Partners",
     link: "partners",
   },
+  {
+    name: "Contact",
+    link: "contact",
+  },
 ];

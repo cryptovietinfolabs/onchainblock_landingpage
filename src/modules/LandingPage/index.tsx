@@ -6,6 +6,7 @@ import SectionIndicatorWrapper from "@/components/SectionIndicatorWrapper";
 import { useScroll } from "@/contexts/ScrollProvider";
 
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Introduction from "./components/Introduction";
 import Partner from "./components/Partner";
@@ -16,13 +17,15 @@ export default function LandingPage(): React.ReactElement {
   const introductionRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const partnersRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     scrollRefs["/"] = homeRef;
     scrollRefs.introduction = introductionRef;
     scrollRefs.about = aboutRef;
     scrollRefs.partners = partnersRef;
-  }, [homeRef, introductionRef, aboutRef, partnersRef, scrollRefs]);
+    scrollRefs.contact = contactRef;
+  }, [homeRef, introductionRef, aboutRef, partnersRef, contactRef, scrollRefs]);
 
   return (
     <Stack gap={40} overflowX="hidden">
@@ -40,6 +43,11 @@ export default function LandingPage(): React.ReactElement {
       <SectionIndicatorWrapper section="partners">
         <Box ref={partnersRef}>
           <Partner />
+        </Box>
+      </SectionIndicatorWrapper>
+      <SectionIndicatorWrapper section="contact">
+        <Box ref={contactRef}>
+          <Contact />
         </Box>
       </SectionIndicatorWrapper>
     </Stack>

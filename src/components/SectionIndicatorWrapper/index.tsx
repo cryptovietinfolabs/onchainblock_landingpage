@@ -12,14 +12,8 @@ import {
 } from "react";
 
 interface Props extends PropsWithChildren {
-  section: "/" | "introduction" | "about" | "partners";
-  sectionBefore?:
-    | "/"
-    | "about"
-    | "how-to-buy"
-    | "nft-nomics"
-    | "phase"
-    | "contact";
+  section: "/" | "introduction" | "about" | "partners" | "contact";
+  sectionBefore?: "/" | "introduction" | "about" | "partners" | "contact";
   children?: ReactNode;
 }
 
