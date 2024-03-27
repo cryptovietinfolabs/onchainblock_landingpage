@@ -5,19 +5,15 @@ export interface INavItem {
 
 export const navList: INavItem[] = [
   {
-    name: "Introduction",
-    link: "introduction",
-  },
-  {
     name: "About",
-    link: "about",
+    link: "/about",
   },
   {
-    name: "Partners",
-    link: "partners",
+    name: "Terms",
+    link: "/terms",
   },
   {
     name: "Contact",
-    link: "contact",
+    link: "/contact",
   },
 ];

@@ -1,10 +1,10 @@
 "use client";
 import { Box, Flex } from "@chakra-ui/react";
+import Footer from "@Layouts/Footer";
+import Header from "@Layouts/Header";
 
 import Container from "@/components/Container";
 
-import Footer from "./Footer";
-import Header from "./Header";
 import s from "./style.module.scss";
 
 interface LayoutProps {

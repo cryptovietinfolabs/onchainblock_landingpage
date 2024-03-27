@@ -44,9 +44,10 @@ export default function RootLayout({
       </Head>
       <body className={` ${opensans.className}`}>
         <Providers initialState={initialState}>
-          <Layout>
+          {/* <Layout>
             <Template>{children}</Template>
-          </Layout>
+          </Layout> */}
+          <Template>{children}</Template>
         </Providers>
       </body>
     </html>

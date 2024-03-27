@@ -8,11 +8,11 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import SvgInsert from "@/components/SvgInsert";
 import { navList } from "@/constants/navList";
-import { useScroll } from "@/contexts/ScrollProvider";
 import useUiContext from "@/contexts/UiProvider";
 import useWindowSize from "@/hooks/common/useWindowSize";
 
@@ -21,7 +21,7 @@ import s from "./style.module.scss";
 
 export default function Header(): React.ReactElement {
   const { isDesktop } = useWindowSize();
-  const { scrollTo } = useScroll();
+  const router = useRouter();
   const { activeSection } = useUiContext();
   const [isOpenNav, setIsOpenNav] = useState(false);
 
@@ -73,7 +73,14 @@ export default function Header(): React.ReactElement {
               </>
             ) : (
               <>
-                <SvgInsert src="/logos/logo.svg" />
+                <Box
+                  cursor="pointer"
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                >
+                  <SvgInsert src="/logos/logo.svg" />
+                </Box>
                 <HStack>
                   {navList.map((navItem) => {
                     return (
@@ -83,7 +90,9 @@ export default function Header(): React.ReactElement {
                         className={`${s.header_link} ${
                           activeSection === navItem.link && s.active
                         }`}
-                        onClick={() => scrollTo(navItem.link)}
+                        onClick={() => {
+                          router.push(navItem.link);
+                        }}
                       >
                         <Text fontSize="md" fontWeight="bold">
                           {navItem.name}
