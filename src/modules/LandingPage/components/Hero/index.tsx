@@ -10,12 +10,12 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { Ref, useRef } from "react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 import s from "./style.module.scss";
-import Image from "next/image";
 
 export default function Hero(): React.ReactElement {
   const container = useRef<HTMLDivElement | null>(null);
