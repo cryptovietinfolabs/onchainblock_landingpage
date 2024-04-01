@@ -1,11 +1,14 @@
 import {
   Box,
-  Button,
   GridItem,
+  HStack,
+  IconButton,
   SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";
+
+import SvgInsert from "@/components/SvgInsert";
 
 import s from "./style.module.scss";
 
@@ -41,7 +44,29 @@ export default function AboutHero(): React.ReactElement {
                 Applications
               </Text>
               <Box>
-                <Button>Click here</Button>
+                <HStack>
+                  <IconButton
+                    color="brand.neutral.grey.1"
+                    isRound
+                    variant="ghost"
+                    icon={<SvgInsert src={"/icons/Discord.svg"} />}
+                    aria-label="Discord"
+                  />
+                  <IconButton
+                    color="brand.neutral.grey.1"
+                    isRound
+                    variant="ghost"
+                    icon={<SvgInsert src={"/icons/Twitter.svg"} />}
+                    aria-label="Discord"
+                  />
+                  <IconButton
+                    color="brand.neutral.grey.1"
+                    isRound
+                    variant="ghost"
+                    icon={<SvgInsert src={"/icons/Telegram.svg"} />}
+                    aria-label="Discord"
+                  />
+                </HStack>
               </Box>
             </Stack>
             <Box className={s.hero_desc_wrapper}>

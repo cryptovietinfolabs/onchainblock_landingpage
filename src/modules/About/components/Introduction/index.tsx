@@ -1,25 +1,53 @@
-import { Box, Text } from "@chakra-ui/react";
+"use client";
+
+import { GridItem, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+
+import { aboutIntroductionContents } from "@/constants/aboutIntroductionContents";
+import useWindowSize from "@/hooks/common/useWindowSize";
+
+import s from "./style.module.scss";
 
 export default function AboutIntroduction(): React.ReactElement {
+  const { isMobile } = useWindowSize();
+
   return (
-    <Box>
-      <Text>Leading the Way in Blockchain Data Standards</Text>
-      <Text>
-        At OnchainBlock, we set the standard for blockchain data standards,
-        accounting methods, and disclosure protocols. We believe in a
-        standardized approach to data in an industry characterized by open
-        design possibilities.
+    <VStack className={s.introduction}>
+      <Text fontSize={42} fontWeight={600} className={s.introduction_title}>
+        Leading the Way in Blockchain Data Standards
       </Text>
-      <Text>
-        Our team closely collaborates with project groups to develop best
-        practices for internal disclosure and transparency related to
-        governance, ensuring integrity and trust within the ecosystem.
-      </Text>
-      <Text>
-        Furthermore, we are committed to providing the most advanced data
-        analytics platform in the cryptocurrency market, empowering users with
-        comprehensive assessment tools and detailed information.
-      </Text>
-    </Box>
+
+      {isMobile ? (
+        <Stack>
+          {aboutIntroductionContents.map((item) => (
+            <Text fontSize={18} key={item}>
+              {item}
+            </Text>
+          ))}
+        </Stack>
+      ) : (
+        <SimpleGrid
+          columns={{ base: 1, sm: 2 }}
+          className={s.introduction_list}
+        >
+          <GridItem>
+            <Stack className={s.introduction_item}>
+              <Text fontSize={18}>{aboutIntroductionContents[0]}</Text>
+            </Stack>
+          </GridItem>
+          <GridItem />
+          <GridItem />
+          <GridItem>
+            <Stack className={s.introduction_item}>
+              <Text fontSize={18}>{aboutIntroductionContents[1]}</Text>
+            </Stack>
+          </GridItem>
+          <GridItem>
+            <Stack className={s.introduction_item}>
+              <Text fontSize={18}>{aboutIntroductionContents[2]}</Text>
+            </Stack>
+          </GridItem>
+        </SimpleGrid>
+      )}
+    </VStack>
   );
 }

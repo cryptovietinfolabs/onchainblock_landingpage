@@ -1,0 +1,21 @@
+.pipeline {
+  margin-bottom: 100px;
+
+  &_list {
+    gap: 32px
+  }
+
+  &_title {
+    margin-bottom: 24px;
+  }
+
+  &_item {
+    &_img {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: grey;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+  }
+}

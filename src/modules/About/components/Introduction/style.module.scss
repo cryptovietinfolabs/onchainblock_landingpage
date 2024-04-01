@@ -1,0 +1,15 @@
+.introduction {
+  margin-bottom: 120px;
+
+  &_title {
+    margin-bottom: 24px;
+  }
+
+  &_list {
+    gap: 32px;
+  }
+
+  &_item {
+    max-width: 500px;
+  }
+}
