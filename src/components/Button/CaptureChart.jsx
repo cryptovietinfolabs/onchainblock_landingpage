@@ -3,11 +3,11 @@ import React from "react";
 function CaptureChart({ handleCapture }) {
   return (
     <ul
-      className={`rounded-sm relative text-main2 btn-download text-xs hover:bg-gray-200 w-full px-2 py-1`}
+      className={`rounded-sm relative text-main2 btn-download text-xs hover:bg-gray-700 w-full px-2 py-1`}
     >
       <li className="relative">
         <svg
-          className="w-4 h-4 rounded-md hover:bg-gray-200"
+          className="w-4 h-4 rounded-md hover:bg-gray-700"
           width="16px"
           height="16px"
           viewBox="0 0 24 24"
@@ -23,26 +23,26 @@ function CaptureChart({ handleCapture }) {
           className={`btn-download__sub top-7 shadow-md hidden px-4 border py-2 -right-4 bg-black rounded-md absolute z-10 flex-col w-max text-left`}
         >
           <button
-            className="px-4 py-2 hover:bg-gray-200 transition-all rounded-sm"
+            className="px-4 py-2 hover:bg-gray-700 transition-all rounded-sm"
             onClick={() => handleCapture("png")}
           >
             Download PNG
           </button>
 
           <button
-            className="px-4 py-2 hover:bg-gray-200 transition-all rounded-sm"
+            className="px-4 py-2 hover:bg-gray-700 transition-all rounded-sm"
             onClick={() => handleCapture("jpeg")}
           >
             Download JPEG
           </button>
           <button
-            className="px-4 py-2 hover:bg-gray-200 transition-all rounded-sm"
+            className="px-4 py-2 hover:bg-gray-700 transition-all rounded-sm"
             onClick={() => handleCapture("svg+xml")}
           >
             Download SVG
           </button>
           <button
-            className="px-4 py-2 hover:bg-gray-200 transition-all rounded-sm"
+            className="px-4 py-2 hover:bg-gray-700 transition-all rounded-sm"
             onClick={() => handleCapture("pdf")}
           >
             Download PDF

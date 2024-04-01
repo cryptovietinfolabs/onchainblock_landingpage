@@ -10,7 +10,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
   return (
     <div className="flex items-center  rounded-md w-max text-xs font-semibold text-text mx-4 border border-gray-300">
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "1W" ? "bg-gray-200" : ""
         }`}
         onClick={() =>
@@ -20,7 +20,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
         7D
       </button>
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "1M" ? "bg-gray-200" : ""
         }`}
         onClick={() =>
@@ -30,7 +30,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
         1M
       </button>
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "3M" ? "bg-gray-200" : ""
         }`}
         onClick={() =>
@@ -40,7 +40,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
         3M
       </button>
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "6M" ? "bg-gray-200" : ""
         }`}
         onClick={() =>
@@ -50,7 +50,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
         6M
       </button>
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "1Y" ? "bg-gray-200" : ""
         }`}
         onClick={() =>
@@ -60,7 +60,7 @@ function ButtonChart({ handleClickExportChart, handleCapture }) {
         1Y
       </button>
       <button
-        className={`rounded-sm hover:bg-gray-200 w-full h-full px-2 py-1 ${
+        className={`rounded-sm hover:bg-gray-700 w-full h-full px-2 py-1 ${
           activeButton === "All" ? "bg-gray-200" : ""
         }`}
         onClick={() =>

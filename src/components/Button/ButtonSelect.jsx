@@ -13,7 +13,7 @@ export default function ButtonSelectChart({ label, handleRemoveLabel }) {
             handleRemoveLabel(item);
           }}
           className={` px-2 gap-2 whitespace-pre  py-1 flex items-center justify-between
-                     hover:bg-gray-200 border text-xs transition-all rounded-xl`}
+                     hover:bg-gray-700 border text-xs transition-all rounded-xl`}
         >
           {item}
           <IoMdClose />

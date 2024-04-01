@@ -24,7 +24,7 @@ export default function ButtonDrop({ labelSelect, handleAddLabel }) {
                   handleAddLabel(item);
                 }}
                 className={`px-3 py-1 my-0.5 
-                 hover:bg-gray-200 border transition-all rounded-md`}
+                 hover:bg-gray-700 border transition-all rounded-md`}
               >
                 {item}
               </button>
