@@ -15,6 +15,7 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 import s from "./style.module.scss";
+import Image from "next/image";
 
 export default function Hero(): React.ReactElement {
   const container = useRef<HTMLDivElement | null>(null);
@@ -76,28 +77,44 @@ export default function Hero(): React.ReactElement {
             loop={true}
           >
             <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-1" />
+              <Image
+                src="/images/slide1.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
             </SwiperSlide>
             <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-2" />
+              <Image
+                src="/images/slide2.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
             </SwiperSlide>
             <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-3" />
+              <Image
+                src="/images/slide3.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
             </SwiperSlide>
             <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-4" />
+              <Image
+                src="/images/slide4.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
             </SwiperSlide>
             <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-5" />
-            </SwiperSlide>
-            <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-6" />
-            </SwiperSlide>
-            <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-7" />
-            </SwiperSlide>
-            <SwiperSlide className={s.slide_img}>
-              <img src="https://source.unsplash.com/random?computer chart-8" />
+              <Image
+                src="/images/slide5.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
             </SwiperSlide>
           </Swiper>
         </Stack>

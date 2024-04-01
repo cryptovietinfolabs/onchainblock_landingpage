@@ -10,8 +10,19 @@
     background: #ffffff26;
     border-radius: 16px;
     backdrop-filter: blur(8px);
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
 
+    &_inner {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+    }
+    
     img {
+      object-fit: cover;
       border-radius: 4px;
     }
   }

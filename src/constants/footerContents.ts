@@ -4,7 +4,7 @@ export const footerContents = [
     children: [
       {
         label: "About us",
-        link: "https://docs.google.com/document/d/1HpKo6gM0W7c-1IktlvzlwU2HEfr-Mlf4a6o4vVcymW0/edit?usp=sharing",
+        link: "/about",
       },
       {
         label: "Contact",
@@ -12,7 +12,7 @@ export const footerContents = [
       },
       {
         label: "Terms of Service",
-        link: "https://docs.google.com/document/d/1fvwz6vZ4TIx8N0Irf_tDdXDc3g7P5dx0PhpxwdbcxUc/edit?usp=sharing",
+        link: "/terms",
       },
       {
         label: "Products",
