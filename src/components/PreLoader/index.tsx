@@ -27,7 +27,7 @@ export default function PreLoader(): React.ReactElement {
         gsap.to(refContent.current, {
           opacity: 0,
           ease: "power3.inOut",
-          duration: 2,
+          duration: 1,
           onComplete: () => {
             pageEnter();
             pageAfter();
@@ -38,7 +38,7 @@ export default function PreLoader(): React.ReactElement {
       if (refContent.current)
         gsap.to(refContent.current, {
           ease: "power3.inOut",
-          duration: 2,
+          duration: 1,
           width: `${percent}%`,
           onUpdate: () => {
             // console.log(percent)
