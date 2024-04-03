@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ButtonChart from "@/components/Button/ButtonChart";
 import ButtonCheck from "@/components/Button/ButtonCheck";
@@ -11,6 +11,7 @@ import LoadingChart from "@/components/Loading/LoadingChart";
 import CentralizeApi from "@/data/CentralizeApi";
 import CaptureDiv from "@/hooks/CaptureDiv";
 import useShowLabel from "@/hooks/chart/useShowLabel";
+import useLoadManageStore from "@/stores/useLoadManageStore";
 
 function LineCex() {
   const [isChecked, setIsChecked] = useState(false);
@@ -46,6 +47,22 @@ function LineCex() {
   } = useShowLabel(labelApi, label2);
 
   const { data, isLoading, isError } = CentralizeApi(label);
+  const { percent, setPercentage } = useLoadManageStore();
+
+  useEffect(() => {
+    setPercentage(isLoading ? 0 : 100);
+    // if (!isLoading && percent <= 100) {
+    //   const interval = setInterval(() => {
+    //     setPercentage(percent + 1);
+    //   }, 10);
+    //   return () => {
+    //     clearInterval(interval);
+    //   };
+    // }
+  }, [
+    isLoading,
+    // , percent
+  ]);
 
   const { chartContainerRef, MakeExportChart } = useLineChart2(
     data,

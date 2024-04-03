@@ -2,6 +2,7 @@
 import { Box, Stack } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
+import PreLoader from "@/components/PreLoader";
 import SectionIndicatorWrapper from "@/components/SectionIndicatorWrapper";
 import { useScroll } from "@/contexts/ScrollProvider";
 
@@ -28,28 +29,32 @@ export default function LandingPage(): React.ReactElement {
   }, [homeRef, introductionRef, aboutRef, partnersRef, contactRef, scrollRefs]);
 
   return (
-    <Stack gap={40} overflowX="hidden">
-      <Hero />
-      <SectionIndicatorWrapper section="introduction">
-        <Box ref={introductionRef}>
-          <Introduction />
-        </Box>
-      </SectionIndicatorWrapper>
-      <SectionIndicatorWrapper section="about">
-        <Box ref={aboutRef}>
-          <About />
-        </Box>
-      </SectionIndicatorWrapper>
-      <SectionIndicatorWrapper section="partners">
-        <Box ref={partnersRef}>
-          <Partner />
-        </Box>
-      </SectionIndicatorWrapper>
-      <SectionIndicatorWrapper section="contact">
-        <Box ref={contactRef}>
-          <Contact />
-        </Box>
-      </SectionIndicatorWrapper>
-    </Stack>
+    <>
+      <PreLoader />
+
+      <Stack gap={40} overflowX="hidden">
+        <Hero />
+        <SectionIndicatorWrapper section="introduction">
+          <Box ref={introductionRef}>
+            <Introduction />
+          </Box>
+        </SectionIndicatorWrapper>
+        <SectionIndicatorWrapper section="about">
+          <Box ref={aboutRef}>
+            <About />
+          </Box>
+        </SectionIndicatorWrapper>
+        <SectionIndicatorWrapper section="partners">
+          <Box ref={partnersRef}>
+            <Partner />
+          </Box>
+        </SectionIndicatorWrapper>
+        <SectionIndicatorWrapper section="contact">
+          <Box ref={contactRef}>
+            <Contact />
+          </Box>
+        </SectionIndicatorWrapper>
+      </Stack>
+    </>
   );
 }

@@ -116,6 +116,14 @@ export default function Hero(): React.ReactElement {
                 height={1080}
               />
             </SwiperSlide>
+            <SwiperSlide className={s.slide_img}>
+              <Image
+                src="/images/slide6.jpeg"
+                alt="slide item"
+                width={1920}
+                height={1080}
+              />
+            </SwiperSlide>
           </Swiper>
         </Stack>
       </VStack>
