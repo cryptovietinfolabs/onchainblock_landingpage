@@ -25,11 +25,14 @@ export default function AboutPipeline(): React.ReactElement {
         </Text>
       </VStack>
 
-      <SimpleGrid columns={{ base: 1, sm: 4 }} className={s.pipeline_list}>
+      <SimpleGrid
+        columns={{ base: 1, sm: 2, md: 4 }}
+        className={s.pipeline_list}
+      >
         <GridItem>
           <Stack>
             <Box className={s.pipeline_item_img}>
-              <Image src="" alt="" fill />
+              <Image src="/images/0.png" alt="" fill />
             </Box>
           </Stack>
         </GridItem>
@@ -37,7 +40,7 @@ export default function AboutPipeline(): React.ReactElement {
           <GridItem key={item.label}>
             <Stack>
               <Box className={s.pipeline_item_img}>
-                <Image src="" alt="" fill />
+                <Image src={item.image} alt="" fill />
               </Box>
               <Text fontSize={40} fontWeight={600}>
                 0{index + 1}

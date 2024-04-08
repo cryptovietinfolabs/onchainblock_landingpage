@@ -36,7 +36,7 @@ export default function Footer(): React.ReactElement {
                   {footerContents[0].children.map((child) => {
                     return (
                       <Text
-                        key={child.label}
+                        key={`footer_${child.label}`}
                         fontSize={14}
                         as="a"
                         target="_blank"
@@ -58,7 +58,7 @@ export default function Footer(): React.ReactElement {
                     {footerContents[1].children.map((child) => {
                       return (
                         <Text
-                          key={child.label}
+                          key={`footer_${child.label}`}
                           fontSize={14}
                           color="brand.neutral.grey.4"
                           as="a"
@@ -79,7 +79,7 @@ export default function Footer(): React.ReactElement {
                     {footerContents[2].children.map((child) => {
                       return (
                         <Text
-                          key={child.label}
+                          key={`footer_${child.label}`}
                           fontSize={14}
                           color="brand.neutral.grey.4"
                           as="a"
@@ -120,7 +120,7 @@ export default function Footer(): React.ReactElement {
                       {item.children.map((child) => {
                         return (
                           <Text
-                            key={child.label}
+                            key={`footer_${child.label}`}
                             fontSize={14}
                             as="a"
                             target="_blank"

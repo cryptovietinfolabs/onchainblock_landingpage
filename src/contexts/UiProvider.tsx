@@ -16,6 +16,9 @@ import React, {
   useState,
 } from "react";
 
+import { useIsomorphicLayoutEffect } from "@/hooks/common/useIsomorphicLayoutEffect";
+import useLoadManageStore from "@/stores/useLoadManageStore";
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({
@@ -70,6 +73,7 @@ export const UiProvider: FC<PropsWithChildren> = ({ children }) => {
   const { width, isMobile } = useWindowResize();
   const [isReturnHome, setIsReturnHome] = useState(true);
   const [activeSection, setActiveSection] = useState<string>("/");
+  const { registerLoad, unRegisterLoad } = useLoadManageStore();
 
   useEffect(() => {
     scrollRestoration();
@@ -95,6 +99,14 @@ export const UiProvider: FC<PropsWithChildren> = ({ children }) => {
         break;
     }
   }, [pathName]);
+
+  useIsomorphicLayoutEffect(() => {
+    registerLoad();
+    document.fonts.ready.then(() => {
+      unRegisterLoad();
+    });
+    scrollRestoration();
+  }, []);
 
   const contextValues = useMemo(() => {
     return {

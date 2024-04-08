@@ -11,6 +11,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import LinkEffect from "@/components/LinkEffect";
 import SvgInsert from "@/components/SvgInsert";
 import { navList } from "@/constants/navList";
 import useUiContext from "@/contexts/UiProvider";
@@ -73,31 +74,33 @@ export default function Header(): React.ReactElement {
               </>
             ) : (
               <>
-                <Box
-                  cursor="pointer"
-                  onClick={() => {
-                    router.push("/");
-                  }}
-                >
-                  <SvgInsert src="/logos/logo.svg" />
-                </Box>
+                <LinkEffect href={"/"}>
+                  <Box cursor="pointer">
+                    <SvgInsert src="/logos/logo.svg" />
+                  </Box>
+                </LinkEffect>
                 <HStack>
                   {navList.map((navItem) => {
                     return (
-                      <Button
-                        variant="ghost"
+                      <LinkEffect
                         key={navItem.name}
-                        className={`${s.header_link} ${
-                          activeSection === navItem.link && s.active
-                        }`}
-                        onClick={() => {
-                          router.push(navItem.link);
-                        }}
+                        href={navItem.link}
+                        pageName={navItem.name}
                       >
-                        <Text fontSize="md" fontWeight="bold">
-                          {navItem.name}
-                        </Text>
-                      </Button>
+                        <Button
+                          variant="ghost"
+                          className={`${s.header_link} ${
+                            activeSection === navItem.link && s.active
+                          }`}
+                          // onClick={() => {
+                          //   router.push(navItem.link);
+                          // }}
+                        >
+                          <Text fontSize="md" fontWeight="bold">
+                            {navItem.name}
+                          </Text>
+                        </Button>
+                      </LinkEffect>
                     );
                   })}
                   <Button
