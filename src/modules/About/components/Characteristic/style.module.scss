@@ -1,7 +1,12 @@
 .characteristic {
   margin-bottom: 120px;
   &_list {
-    padding-left: 32px;
     gap: 20px;
+    text-align: center;
+
+    @include min-tablet {
+      text-align: unset;
+      padding-left: 32px;
+    }
   }
 }

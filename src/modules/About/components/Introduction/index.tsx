@@ -12,14 +12,18 @@ export default function AboutIntroduction(): React.ReactElement {
 
   return (
     <VStack className={s.introduction}>
-      <Text fontSize={42} fontWeight={600} className={s.introduction_title}>
+      <Text
+        fontSize={{ base: 24, sm: 24, md: 48 }}
+        fontWeight={600}
+        className={s.introduction_title}
+      >
         Leading the Way in Blockchain Data Standards
       </Text>
 
       {isMobile ? (
         <Stack>
           {aboutIntroductionContents.map((item) => (
-            <Text fontSize={18} key={item}>
+            <Text fontSize={{ base: 14, sm: 14, md: 18 }} key={item}>
               {item}
             </Text>
           ))}

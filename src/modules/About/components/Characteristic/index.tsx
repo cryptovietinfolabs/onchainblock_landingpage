@@ -7,7 +7,7 @@ import s from "./style.module.scss";
 export default function AboutCharacteristic(): React.ReactElement {
   return (
     <VStack className={s.characteristic}>
-      <Text fontSize={42} fontWeight={600}>
+      <Text fontSize={{ base: 24, sm: 24, md: 48 }}>
         Our Onchain Data Platform
       </Text>
       <List className={s.characteristic_list}>
@@ -15,10 +15,10 @@ export default function AboutCharacteristic(): React.ReactElement {
           return (
             <ListItem key={item.label}>
               <Stack>
-                <Text fontSize={24} fontWeight={600}>
+                <Text fontSize={{ base: 16, sm: 16, md: 24 }} fontWeight={600}>
                   {item.label}
                 </Text>
-                <Text fontSize={18}>{item.desc}</Text>
+                <Text fontSize={{ base: 16, sm: 16, md: 18 }}>{item.desc}</Text>
               </Stack>
             </ListItem>
           );

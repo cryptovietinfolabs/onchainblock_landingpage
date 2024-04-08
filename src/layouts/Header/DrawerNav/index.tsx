@@ -1,7 +1,8 @@
 import { Button, Text } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
+import LinkEffect from "@/components/LinkEffect";
 import { navList } from "@/constants/navList";
-import { useScroll } from "@/contexts/ScrollProvider";
 import useUiContext from "@/contexts/UiProvider";
 
 import s from "./style.module.scss";
@@ -16,26 +17,36 @@ export default function DrawerNav({
   onOpenNav,
 }: DrawerNavProps): React.ReactElement {
   const { activeSection } = useUiContext();
-  const { scrollTo } = useScroll();
+  const router = useRouter();
 
   return (
     <nav className={`${s.mobileNav} ${isOpen ? s.open : ""}`}>
       <div className={s.mobileNav_nav}>
+        <Button
+          variant="ghost"
+          className={`${s.header_link} ${activeSection === "/" && s.active}`}
+          onClick={() => {
+            router.push("/");
+          }}
+        >
+          <Text fontSize="md">Home</Text>
+        </Button>
         {navList.map((item) => (
-          <Button
-            key={item.name}
-            variant="text"
-            className={`${s.mobileNav_item}
-          ${s.heading1} ${activeSection === item.link && s.active}`}
-            onClick={() => {
-              scrollTo(item.link);
-              onOpenNav(false);
-            }}
-          >
-            <Text fontSize="2xl" color="brand.yellow.200">
-              {item.name}
-            </Text>
-          </Button>
+          <LinkEffect key={item.name} href={item.link} pageName={item.name}>
+            <Button
+              variant="ghost"
+              className={`${s.header_link} ${
+                activeSection === item.link && s.active
+              }`}
+              onClick={() => {
+                onOpenNav(false);
+              }}
+            >
+              <Text fontSize="md" fontWeight="bold">
+                {item.name}
+              </Text>
+            </Button>
+          </LinkEffect>
         ))}
       </div>
     </nav>
