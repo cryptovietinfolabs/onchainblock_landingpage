@@ -3,6 +3,24 @@
   padding-top: 100px;
   margin-bottom: 120px;
 
+  &_outer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_image {
+    left: 0;
+    object-fit: cover;
+
+    &::after {
+      content: "";
+      z-index: 999;
+      position: absolute;
+      background-color: red;
+      height: 600px;
+    }
+  }
+
   &_title {
     gap: 32px;
   }
@@ -55,14 +73,16 @@
   }
 
   &::before {
-    content: "";
-    z-index: -1;
-    border-radius: 999px;
-    width: 500px;
-    aspect-ratio: 1;
-    background-color: var(--blue-3);
-    filter: blur(400px);
-    position: absolute;
-    right: 0;
+    @include min-tablet {
+      content: "";
+      z-index: -1;
+      border-radius: 999px;
+      width: 500px;
+      aspect-ratio: 1;
+      background-color: var(--blue-3);
+      filter: blur(400px);
+      position: absolute;
+      right: 0;
+    }
   }
 }
