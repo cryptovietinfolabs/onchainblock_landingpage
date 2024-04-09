@@ -46,13 +46,13 @@ export default function AboutPipeline(): React.ReactElement {
               <Box className={s.pipeline_item_img}>
                 <Image src={item.image} alt="" fill />
               </Box>
-              <Text fontSize={40} fontWeight={600}>
+              <Text fontSize={{ base: 24, sm: 40 }} fontWeight={600}>
                 0{index + 1}
               </Text>
-              <Text fontSize={18} fontWeight={600}>
+              <Text fontSize={{ base: 14, sm: 18 }} fontWeight={600}>
                 {item.label}
               </Text>
-              <Text fontSize={18}>{item.desc}</Text>
+              <Text fontSize={{ base: 14, sm: 18 }}>{item.desc}</Text>
             </Stack>
           </GridItem>
         ))}

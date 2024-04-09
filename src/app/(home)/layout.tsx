@@ -4,6 +4,7 @@ import Footer from "@Layouts/Footer";
 import Header from "@Layouts/Header";
 
 import Container from "@/components/Container";
+import PreLoader from "@/components/PreLoader";
 
 import s from "./style.module.scss";
 
@@ -14,6 +15,8 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps): React.ReactElement {
   return (
     <Flex>
+      <PreLoader />
+
       <Container>
         <Box className={s.bg_wrapper}>
           <Box className={s.bg} />

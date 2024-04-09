@@ -88,8 +88,8 @@ export default function AboutHero(): React.ReactElement {
                     color="brand.neutral.grey.1"
                     className={s.hero_desc}
                   >
-                    Your Complete Onchain Data Solution, Standardizing Financial
-                    and Alternative Data for Leading Blockchains and
+                    Providing an Integrated Onchain Data Solution, Streamlining
+                    Financial and Alternative Data for Prominent Blockchains and
                     Decentralized Applications
                   </Text>
                 </Box>

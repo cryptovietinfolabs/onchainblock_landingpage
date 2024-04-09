@@ -3,10 +3,15 @@
   &_list {
     gap: 20px;
     text-align: center;
+    gap: 24px;
 
     @include min-tablet {
       text-align: unset;
       padding-left: 32px;
+    }
+    
+    &_item {
+      margin-bottom: 24px;
     }
   }
 }

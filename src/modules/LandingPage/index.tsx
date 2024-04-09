@@ -30,8 +30,7 @@ export default function LandingPage(): React.ReactElement {
 
   return (
     <>
-      <PreLoader />
-
+      <div />
       <Stack gap={40} overflowX="hidden">
         <Hero />
         <SectionIndicatorWrapper section="introduction">
