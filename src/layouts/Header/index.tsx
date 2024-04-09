@@ -74,11 +74,9 @@ export default function Header(): React.ReactElement {
               </>
             ) : (
               <>
-                <LinkEffect href={"/"}>
-                  <Box cursor="pointer">
-                    <SvgInsert src="/logos/logo.svg" />
-                  </Box>
-                </LinkEffect>
+                <Box cursor="pointer" onClick={() => router.push("/")}>
+                  <SvgInsert src="/logos/logo.svg" />
+                </Box>
                 <HStack>
                   {navList.map((navItem) => {
                     return (

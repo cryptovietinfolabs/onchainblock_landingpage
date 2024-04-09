@@ -13,7 +13,7 @@ export default function AboutCharacteristic(): React.ReactElement {
       <List className={s.characteristic_list}>
         {aboutCharacteristicData.map((item) => {
           return (
-            <ListItem key={item.label}>
+            <ListItem key={item.label} className={s.characteristic_list_item}>
               <Stack>
                 <Text fontSize={{ base: 16, sm: 16, md: 24 }} fontWeight={600}>
                   {item.label}
