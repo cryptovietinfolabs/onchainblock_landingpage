@@ -2,12 +2,11 @@
 import { Box, Stack } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
-import PreLoader from "@/components/PreLoader";
 import SectionIndicatorWrapper from "@/components/SectionIndicatorWrapper";
 import { useScroll } from "@/contexts/ScrollProvider";
 
+import ContactPage from "../Contact";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Introduction from "./components/Introduction";
 import Partner from "./components/Partner";
@@ -50,7 +49,7 @@ export default function LandingPage(): React.ReactElement {
         </SectionIndicatorWrapper>
         <SectionIndicatorWrapper section="contact">
           <Box ref={contactRef}>
-            <Contact />
+            <ContactPage />
           </Box>
         </SectionIndicatorWrapper>
       </Stack>

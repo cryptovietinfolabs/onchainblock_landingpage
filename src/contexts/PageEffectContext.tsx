@@ -126,9 +126,7 @@ export const PageEffectProvider: FC<PropsWithChildren> = ({ children }) => {
     setTimeout(pageTransitionOut, TIME_DELAY_ROUTING);
   }, [pathName]);
 
-  useEffect(() => {
-    console.log(pageStatus);
-  }, [pageStatus]);
+  useEffect(() => {}, [pageStatus]);
 
   const contextValues = useMemo(() => {
     return {
