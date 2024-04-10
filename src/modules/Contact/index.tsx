@@ -12,8 +12,10 @@ import {
   Stack,
   Text,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -38,6 +40,10 @@ const validationSchema = yup.object({
 });
 
 export default function ContactPage(): React.ReactElement {
+  const [isLoading, setIsLoading] = useState<boolean>();
+  const [isSuccess, setIsSuccess] = useState<boolean>();
+  const [isError, setIsError] = useState<boolean>();
+  const toast = useToast();
   const methods = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues,
@@ -51,14 +57,41 @@ export default function ContactPage(): React.ReactElement {
   } = methods;
 
   const onSubmit = async (data: IContactEmailSchema): Promise<void> => {
-    await fetch("/api/email", {
-      method: "POST",
-      body: JSON.stringify({
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      }),
-    });
+    try {
+      toast({
+        id: "loading",
+        title: "Sending...",
+        status: "loading",
+        isClosable: true,
+        variant: "loading",
+      });
+      await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+      toast.close("loading");
+      toast({
+        id: "success",
+        title: "Success!",
+        description: "Your message was sent.",
+        status: "success",
+        isClosable: true,
+        variant: "success",
+      });
+    } catch (error) {
+      toast({
+        id: "error",
+        title: "Error",
+        description: "There was an error sending your message.",
+        status: "error",
+        isClosable: true,
+        variant: "error",
+      });
+    }
   };
 
   return (
@@ -116,6 +149,26 @@ export default function ContactPage(): React.ReactElement {
           </FormProvider>
         </FormControl>
       </SimpleGrid>
+      {/* {isLoading && <Alert status="info">Sending message...</Alert>}
+      {isSuccess && (
+        <Alert status="success" position="fixed" top="80px" right="20px">
+          <AlertIcon />
+          <AlertTitle>Success!</AlertTitle>
+          <AlertDescription>
+            Your message was sent successfully.
+          </AlertDescription>
+          <CloseButton position="absolute" right="8px" top="8px" />
+        </Alert>
+      )}
+      {isError && (
+        <Alert status="error">
+          <AlertIcon />
+          <AlertTitle>Error!</AlertTitle>
+          <AlertDescription>
+            There was an error sending your message.
+          </AlertDescription>
+        </Alert>
+      )} */}
     </Container>
   );
 }
