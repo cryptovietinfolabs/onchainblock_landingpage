@@ -32,25 +32,6 @@ export const Button: ComponentStyleConfig = {
         },
       },
     },
-    //   ghost: {
-    //     color: "brand.camo.200",
-    //     _hover: {
-    //       color: "brand.yellow.100",
-    //       svg: {
-    //         transition: "all 0.3s ease-in-out",
-    //         fill: "brand.yellow.100",
-    //       },
-    //     },
-    //   },
-    //   outline: {
-    //     borderRadius: "24px",
-    //     borderWidth: "1px",
-    //     borderStyle: "solid",
-    //     borderColor: "brand.camo.200",
-    //     height: "100%",
-    //     px: "4px",
-    //     py: "4px",
-    //   },
   },
 };
 
@@ -229,6 +210,35 @@ const List: ComponentStyleConfig = {
   },
 };
 
+const Alert: ComponentStyleConfig = {
+  baseStyle: {
+    title: {
+      fontSize: "20px",
+    },
+    description: {
+      fontSize: "14px",
+    },
+  },
+
+  variants: {
+    loading: {
+      container: {
+        bgColor: "#FBBF24",
+      },
+    },
+    success: {
+      container: {
+        bgColor: "#2B8AC9",
+      },
+    },
+    error: {
+      container: {
+        bgColor: "#B91C1C",
+      },
+    },
+  },
+};
+
 const themeDark = extendTheme({
   colors,
   config,
@@ -249,6 +259,7 @@ const themeDark = extendTheme({
     Modal,
     Select,
     Table,
+    Alert,
     List,
     Textarea,
   },
